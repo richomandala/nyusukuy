@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      <p class="ion-text-center">
+        <img src="../../assets/icon/favicon.png" width="20%">
+      </p>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-text>
+    <p class="ion-text-center">Sign In</p>
+  </ion-text>
+  <ion-item>
+    <ion-label position="floating">Username</ion-label>
+    <ion-input type="text" [formControl]="username"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="floating">Password</ion-label>
+    <ion-input type="password" [formControl]="password"></ion-input>
+  </ion-item>
+
+  <ion-button [disabled]="username.invalid || password.invalid" expand="full" color="primary" (click)="login()">Login
+  </ion-button>
+</ion-content>

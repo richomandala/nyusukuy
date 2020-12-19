@@ -1,0 +1,47 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>{{data.kode_penjualan}}</ion-title>
+    <ion-button fill="outline" color="primary" slot="end" (click)="dismissModal()">Close</ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="3">Nama : </ion-col>
+      <ion-col>{{data.pembeli}}</ion-col>
+    </ion-row>
+  </ion-grid>
+  <table border="1" width="100%" class="ion-text-center">
+    <thead>
+      <tr>
+        <th>Produk</th>
+        <th>Harga</th>
+        <th>Qty</th>
+        <th>Total</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let product of products">
+      <tr>
+        <td class="ion-padding">{{product.produk}}</td>
+        <td class="ion-padding">Rp {{product.harga|number}}</td>
+        <td class="ion-padding">{{product.jumlah}}</td>
+        <td class="ion-padding">Rp {{product.total|number}}</td>
+      </tr>
+    </tbody>
+    <tfoot>
+      <tr>
+        <td colspan="3" class="ion-text-right ion-padding">Grand total</td>
+        <td class="ion-padding">Rp {{data.total|number}}</td>
+      </tr>
+      <tr>
+        <td colspan="3" class="ion-text-right ion-padding">Bayar</td>
+        <td class="ion-padding">Rp {{data.bayar|number}}</td>
+      </tr>
+      <tr>
+        <td colspan="3" class="ion-text-right ion-padding">Kembali</td>
+        <td class="ion-padding">Rp {{data.kembali|number}}</td>
+      </tr>
+    </tfoot>
+  </table>
+</ion-content>

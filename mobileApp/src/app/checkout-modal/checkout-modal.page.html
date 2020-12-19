@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Checkout</ion-title>
+    <ion-button fill="outline" color="primary" slot="end" (click)="dismissModal()">Close</ion-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <div *ngFor="let data of datas">
+      <ion-row>
+        <ion-col size="6">
+          {{data.produk}}
+        </ion-col>
+        <ion-col size="2">
+          {{data.jumlah}}
+        </ion-col>
+        <ion-col class="ion-text-end">
+          Rp {{data.total|number}}
+        </ion-col>
+      </ion-row>
+    </div>
+    <hr>
+    <ion-row class="ion-text-end">
+      <ion-col size="8">
+        Total
+      </ion-col>
+      <ion-col>
+        Rp {{total|number}}
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
+<ion-footer>
+  <ion-toolbar>
+    <ion-item>
+      <ion-label position="floating">Nama</ion-label>
+      <ion-input [formControl]="nama"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Uang bayar</ion-label>
+      <ion-input [formControl]="uang" min="2" type="number"></ion-input>
+    </ion-item>
+    <ion-button [disabled]="nama.invalid || uang.invalid" expand="block" (click)="bayar()">Bayar</ion-button>
+  </ion-toolbar>
+</ion-footer>

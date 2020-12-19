@@ -1,0 +1,35 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Daftar Penjualan
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-card *ngFor="let data of datas">
+    <ion-card-header>
+      <ion-card-subtitle>{{data.kode_penjualan}}</ion-card-subtitle>
+      <ion-card-title>{{data.pembeli}}</ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col>Total: </ion-col>
+          <ion-col>Rp {{data.total|number}}</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>Bayar: </ion-col>
+          <ion-col>Rp {{data.bayar|number}}</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>Kembali: </ion-col>
+          <ion-col>Rp {{data.kembali|number}}</ion-col>
+        </ion-row>
+      </ion-grid>
+      <ion-button expand="block" (click)="showModal(data)">Lihat rincian</ion-button>
+    </ion-card-content>
+  </ion-card>
+
+</ion-content>

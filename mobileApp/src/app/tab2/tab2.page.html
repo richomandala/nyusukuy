@@ -1,0 +1,65 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Keranjang
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <div *ngIf="datas.length > 0; else notFound">
+    <ion-card *ngFor="let data of datas">
+      <ion-grid>
+        <ion-row>
+          <ion-col text-wrap>
+            {{data.produk}}
+          </ion-col>
+          <ion-col class="ion-text-end">
+            <ion-badge (click)="changeTmp(data.id,1*data.jumlah-1)">
+              <ion-icon name="remove"></ion-icon>
+            </ion-badge>
+            <ion-badge style="line-height: 15px;">
+              {{data.jumlah}}
+            </ion-badge>
+            <ion-badge (click)="changeTmp(data.id,1*data.jumlah+1)">
+              <ion-icon name="add"></ion-icon>
+            </ion-badge>
+          </ion-col>
+        </ion-row>
+        <hr>
+        <ion-row>
+          <ion-col>
+            <ion-badge>Rp {{data.total | number}}</ion-badge>
+            <ion-card-subtitle>( {{data.jumlah}} x Rp {{data.harga | number}} )</ion-card-subtitle>
+          </ion-col>
+          <ion-col class="ion-text-end">
+            <ion-badge color="medium" (click)="deleteTmp(data.id)">Hapus</ion-badge>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card>
+  </div>
+
+  <ng-template class="ion-text-end" #notFound>
+    <ion-grid>
+      <ion-row>
+        <ion-col class="ion-text-center ion-padding-top">
+          <img src="../../assets/icon/not-found.png" class="img-not-found" alt="not-found">
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ng-template>
+
+</ion-content>
+
+<ion-footer *ngIf="datas.length > 0">
+  <ion-toolbar class="ion-text-center">
+    <ion-item>
+      Total : <ion-badge>Rp {{total.grand_total|number}}</ion-badge>
+      <ion-button color="danger" slot="end" (click)="showModal(datas,total.grand_total)">
+        Checkout <ion-icon name="cart"></ion-icon>
+      </ion-button>
+    </ion-item>
+  </ion-toolbar>
+</ion-footer>

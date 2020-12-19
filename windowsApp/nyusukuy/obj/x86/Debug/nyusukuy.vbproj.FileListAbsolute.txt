@@ -1,0 +1,12 @@
+D:\RICHO\Tugas\Pak Anggra\nyusukuy\nyusukuy\bin\Debug\nyusukuy.exe
+D:\RICHO\Tugas\Pak Anggra\nyusukuy\nyusukuy\bin\Debug\nyusukuy.pdb
+D:\RICHO\Tugas\Pak Anggra\nyusukuy\nyusukuy\bin\Debug\nyusukuy.xml
+D:\RICHO\Tugas\Pak Anggra\nyusukuy\nyusukuy\obj\x86\Debug\nyusukuy.inventaris.resources
+D:\RICHO\Tugas\Pak Anggra\nyusukuy\nyusukuy\obj\x86\Debug\nyusukuy.Resources.resources
+D:\RICHO\Tugas\Pak Anggra\nyusukuy\nyusukuy\obj\x86\Debug\nyusukuy.vbproj.GenerateResource.Cache
+D:\RICHO\Tugas\Pak Anggra\nyusukuy\nyusukuy\obj\x86\Debug\nyusukuy.exe
+D:\RICHO\Tugas\Pak Anggra\nyusukuy\nyusukuy\obj\x86\Debug\nyusukuy.xml
+D:\RICHO\Tugas\Pak Anggra\nyusukuy\nyusukuy\obj\x86\Debug\nyusukuy.pdb
+D:\RICHO\Tugas\Pak Anggra\nyusukuy\nyusukuy\bin\Debug\Newtonsoft.Json.dll
+D:\RICHO\Tugas\Pak Anggra\nyusukuy\nyusukuy\bin\Debug\Newtonsoft.Json.xml
+D:\RICHO\Tugas\Pak Anggra\nyusukuy\nyusukuy\obj\x86\Debug\nyusukuy.vbprojResolveAssemblyReference.cache
